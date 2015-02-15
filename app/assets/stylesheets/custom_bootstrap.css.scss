@@ -1,0 +1,30 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+h1,h2,h3,h4,h5,h6,p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+}
+
+@mixin box-shadow-footer {
+  -webkit-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.22);
+}
+
+$green: #00968B;
+$green-hover: #48C2B8;
+
+.btn.btn-primary {
+  background-color: $green;
+  border: 1px solid $green;
+}
+.btn.btn-primary:hover {
+  background-color: $green-hover;
+  border: 1px solid $green-hover;
+}
