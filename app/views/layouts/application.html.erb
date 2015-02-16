@@ -23,7 +23,6 @@
         Have a look around and please don’t hesitate to contact me with any comments, questions, or just to say hello!
         </p>
         <ul class="list-inline text-center">
-
           <li>
               <a href="https://facebook.com/">
                   <span class="fa-stack fa-lg">
@@ -49,6 +48,15 @@
           </li>
 
       </ul>
+
+      <% if user_signed_in? %>
+                <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+           <% else %>
+
+               <%= link_to "Log in", new_user_session_path, class: "" %>
+               <%= link_to "Sign up", new_user_registration_path, class: "" %>
+
+        <% end %>
     </div>
   </div>
   <!-- /#sidebar-wrapper -->
@@ -69,7 +77,7 @@
 <!-- Main Content -->
 <div class="container-fluid">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1">
+
       <%# Rails flash messages styled for Bootstrap 3.0 %>
 <% flash.each do |name, msg| %>
   <% if msg.is_a?(String) %>
@@ -80,7 +88,7 @@
   <% end %>
 <% end %>
 <%= yield %>
-    </div>
+
   </div>
 </div>
 </div>

@@ -1,3 +1,24 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin box-shadow {
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+}
+
+#posts {
+  margin: 0 auto;
+
+}
+
+.box {
+  margin: 5px;
+  width: 300px;
+  @include box-shadow;
+}
+
+.box img {
+  width: 100%;
+}
