@@ -18,6 +18,7 @@ gem 'devise', '~> 3.4.1'
 gem 'paperclip', '~> 4.2.1'
 gem 'masonry-rails'
 gem 'therubyracer'
+gem 'friendly_id', '~> 5.1.0'
 
 gem 'aws-sdk', '~> 1.61.0'
 
