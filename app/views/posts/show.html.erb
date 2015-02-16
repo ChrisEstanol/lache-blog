@@ -1,12 +1,14 @@
-<p id="notice"><%= notice %></p>
-
-<p>
+<%= link_to(" < Previous Post ", @post.previous, class: "btn btn-default") if @post.previous %>
+<%= link_to("Next Post >", @post.next, class: "btn btn-default pull-right") if @post.next %>
+<p class="text-center">
   <strong>Title:</strong>
   <%= @post.title %>
 </p>
-<%= image_tag @post.image.url(:large) %>
+<div class="text-center">
+<%= image_tag @post.image.url(:large), class: "text-center" %>
+</div>
 
+<div class="text-center">
 <%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
-<%= link_to("Previous Post", @post.previous) if @post.previous %>
-<%= link_to("Next Post", @post.next) if @post.next %>
+<%= link_to 'Home', posts_path %>
+</div>
